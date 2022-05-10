@@ -4,7 +4,7 @@ boolean isChargeRateOk(float chargeRate)
 {
     if(chargeRate > MAX_CHARGERATE)
     {
-        displayOnConsole("Charge Rate out of range!\n");
+        flag+=1;
         return false;
     }
     return true;

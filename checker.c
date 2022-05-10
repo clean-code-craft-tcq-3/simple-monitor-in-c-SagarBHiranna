@@ -8,7 +8,8 @@ int batteryIsOk(float temperature, float soc, float chargeRate) {
   boolean socStatus = isSocOk(soc);
   boolean chargeRateStatus = isChargeRateOk(chargeRate);
 
-  return logResult(tempStatus, socStatus, chargeRateStatus);
+  if (flag>0){return 0;}
+  else {return 1;}
 }
 
 int main() {
