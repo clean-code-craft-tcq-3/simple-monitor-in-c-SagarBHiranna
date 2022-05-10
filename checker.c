@@ -1,6 +1,7 @@
-#include <stdio.h>
 #include <assert.h>
-#include "logger.h"
+#include "temperatureMonitor.h"
+#include "chargeRateMonitor.h"
+#include "socMonitor.h"
 
 int batteryIsOk(float temperature, float soc, float chargeRate) {
   boolean tempStatus = isTemperatureOk(temperature);
@@ -16,6 +17,7 @@ int batteryIsOk(float temperature, float soc, float chargeRate) {
 }
 
 int main() {
-  batteryIsOk(25.0, 70.0, 0.7);
-  //assert(!batteryIsOk(50, 85, 0));
+
+  assert(batteryIsOk(25.0, 70.0, 0.7));
+  assert(!batteryIsOk(50, 85, 0));
 }
