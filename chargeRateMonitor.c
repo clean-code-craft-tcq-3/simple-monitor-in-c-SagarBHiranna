@@ -10,3 +10,27 @@ boolean isChargeRateOk(float chargeRate)
     }
     return true;
 }
+
+boolean isChargeRateInLowLimit(float temperature)
+{
+    if ((temperature >= LOW_CHARGERATE_BREACH) || (temperature <= LOW_CHARGERATE_WARNING))
+	{
+		return true; 
+	}
+	else
+	{
+		return false; 
+	}
+}
+
+boolean isChargeRateInHighLimit(float temperature)
+{
+    if ((temperature >= HIGH_CHARGERATE_WARNING) || (temperature <= HIGH_CHARGERATE_BREACH))
+	{
+		return true; 
+	}
+	else 
+	{
+		return false; 
+	}
+}

@@ -11,3 +11,27 @@ boolean isTemperatureOk(float temperature)
     }
     return true ;
 }
+
+boolean isTempInLowLimit(float temperature)
+{
+    if ((temperature >= LOW_TEMP_BREACH) || (temperature <= LOW_TEMP_WARNING))
+	{
+		return true; 
+	}
+	else
+	{
+		return false; 
+	}
+}
+
+boolean isTempInHighLimit(float temperature)
+{
+    if ((temperature >= HIGH_TEMP_WARNING) || (temperature <= HIGH_TEMP_BREACH))
+	{
+		return true; 
+	}
+	else 
+	{
+		return false; 
+	}
+}

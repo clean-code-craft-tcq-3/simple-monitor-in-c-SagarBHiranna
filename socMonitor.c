@@ -10,3 +10,27 @@ boolean isSocOk(float soc)
     }
         return true;
 }
+
+boolean isSOCInLowLimit(float temperature)
+{
+    if ((temperature >= LOW_STATEOFCHARGE_BREACH) || (temperature <= LOW_STATEOFCHARGE_WARNING))
+	{
+		return true; 
+	}
+	else
+	{
+		return false; 
+	}
+}
+
+boolean isSOCInHighLimit(float temperature)
+{
+    if ((temperature >= HIGH_STATEOFCHARGE_WARNING) || (temperature <= HIGH_STATEOFCHARGE_BREACH))
+	{
+		return true; 
+	}
+	else 
+	{
+		return false; 
+	}
+}
