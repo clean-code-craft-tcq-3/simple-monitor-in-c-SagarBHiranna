@@ -32,10 +32,6 @@ void reportCRData(boolean crLowLimit, boolean crHighLimit, boolean crInLimit)
     {
         displayOnConsole("Charge Rate Out Of Range !!!!\n");
     }
-    if((crLowLimit+crHighLimit+crInLimit)==3)
-    {
-        displayOnConsole("Charge Rate is fine !!!!\n");
-    }
 }
 
 
@@ -49,10 +45,7 @@ void reportTempData(boolean tempLowLimit, boolean tempHighLimit, boolean tempInL
     {
         displayOnConsole("Temp Out Of Range !!!!\n");
     }
-    if((tempLowLimit+tempHighLimit+tempInLimit)==3)
-    {
-        displayOnConsole("Temp is fine !!!!\n");
-    }
+
 }
 
 void reportSOCData(boolean socLowLimit, boolean socHighLimit, boolean socInLimit)
@@ -65,8 +58,4 @@ void reportSOCData(boolean socLowLimit, boolean socHighLimit, boolean socInLimit
     {
         displayOnConsole("SOC Out Of Range !!!!\n");
     }   
-    if((socLowLimit+socHighLimit+socInLimit)==3)
-    {
-        displayOnConsole("SOC is fine !!!!\n");
-    } 
 }
