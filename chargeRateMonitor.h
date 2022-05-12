@@ -11,9 +11,9 @@
 
 boolean isChargeRateOk(float chargeRate);
 
-boolean isChargeRateInLowLimit(float soc);
+boolean isChargeRateApproachingLowLimit(float chargeRate);
 
-boolean isChargeRateInHighLimit(float soc);
+boolean isChargeRateApproachingHighLimit(float chargeRate);
 
 
 #endif

@@ -2,35 +2,15 @@
 
 boolean isChargeRateOk(float chargeRate)
 {
-    if(chargeRate > MAX_CHARGERATE)
-    {
-        flag+=1;
-        displayOnConsole("Charge Rate out of range!\n");
-        return false;
-    }
-    return true;
+	return(isInRange(LOW_CHARGERATE_BREACH, MAX_CHARGERATE, chargeRate));
 }
 
-boolean isChargeRateInLowLimit(float temperature)
+boolean isChargeRateApproachingLowLimit(float chargeRate)
 {
-    if ((temperature >= LOW_CHARGERATE_BREACH) || (temperature <= LOW_CHARGERATE_WARNING))
-	{
-		return true; 
-	}
-	else
-	{
-		return false; 
-	}
+	return(isInRange(LOW_CHARGERATE_BREACH, LOW_CHARGERATE_WARNING, chargeRate));
 }
 
-boolean isChargeRateInHighLimit(float temperature)
+boolean isChargeRateApproachingHighLimit(float chargeRate)
 {
-    if ((temperature >= HIGH_CHARGERATE_WARNING) || (temperature <= HIGH_CHARGERATE_BREACH))
-	{
-		return true; 
-	}
-	else 
-	{
-		return false; 
-	}
+	return(isInRange(HIGH_CHARGERATE_WARNING, HIGH_CHARGERATE_BREACH, chargeRate));
 }

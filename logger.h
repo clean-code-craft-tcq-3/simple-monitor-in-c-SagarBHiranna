@@ -3,11 +3,15 @@
 
 #include <stdio.h>
 
+#define boolean int
+#define true 1
+#define false 0
+
 int flag ;
 
-typedef enum {false, true} boolean;
 
 void displayOnConsole(char *message);
 
+boolean isInRange(float lowerLimit, float upperLimit, float number);
 
 #endif

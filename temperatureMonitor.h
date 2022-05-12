@@ -12,8 +12,8 @@
 
 boolean isTemperatureOk(float temperature);
 
-boolean isTempInLowLimit(float temperature);
+boolean isTempApproachingLowLimit(float temperature);
 
-boolean isTempInHighLimit(float temperature);
+boolean isTempApproachingHighLimit(float temperature);
 
 #endif

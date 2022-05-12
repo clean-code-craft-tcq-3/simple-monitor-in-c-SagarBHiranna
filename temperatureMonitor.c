@@ -2,36 +2,16 @@
 #include <stdio.h>
 
 boolean isTemperatureOk(float temperature)
-{
-    if(temperature < MIN_TEMPERATURE || temperature > MAX_TEMPERATURE)
-    {
-        flag+=1;
-        displayOnConsole("Temperature out of range!\n");
-        return false ;
-    }
-    return true ;
+{	
+	return(isInRange(MIN_TEMPERATURE, MAX_TEMPERATURE, temperature));
 }
 
-boolean isTempInLowLimit(float temperature)
+boolean isTempApproachingLowLimit(float temperature)
 {
-    if ((temperature >= LOW_TEMP_BREACH) || (temperature <= LOW_TEMP_WARNING))
-	{
-		return true; 
-	}
-	else
-	{
-		return false; 
-	}
+	return(isInRange(LOW_TEMP_BREACH, LOW_TEMP_WARNING, temperature));
 }
 
-boolean isTempInHighLimit(float temperature)
+boolean isTempApproachingHighLimit(float temperature)
 {
-    if ((temperature >= HIGH_TEMP_WARNING) || (temperature <= HIGH_TEMP_BREACH))
-	{
-		return true; 
-	}
-	else 
-	{
-		return false; 
-	}
+	return(isInRange(HIGH_TEMP_WARNING, HIGH_TEMP_BREACH, temperature));
 }

@@ -12,8 +12,8 @@
 
 boolean isSocOk(float soc);
 
-boolean isSOCInLowLimit(float soc);
+boolean isSOCApproachingLowLimit(float soc);
 
-boolean isSOCInHighLimit(float soc);
+boolean isSOCApproachingHighLimit(float soc);
 
 #endif
